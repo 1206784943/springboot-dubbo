@@ -1,0 +1,10 @@
+server:
+  port: 8077 #Tomcat端口
+spring:
+  dubbo:
+    application:
+      name: dubbo-client
+    registry:
+      address: zookeeper://localhost
+      port: 2181
+    scan: com.dubbo.controller
