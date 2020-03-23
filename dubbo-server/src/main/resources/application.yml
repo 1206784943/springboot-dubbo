@@ -11,3 +11,6 @@ spring:
       name: dubbo
       port: 20890 #dubbo服务暴露的端口
     scan: com.dubbo.service #扫描的包名
+  activemq:
+    # MQ所在的服务器的地址
+    broker-url: tcp://localhost:61616

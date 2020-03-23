@@ -8,3 +8,9 @@ spring:
       address: zookeeper://localhost
       port: 2181
     scan: com.dubbo.controller
+  activemq:
+    # MQ所在的服务器的地址
+    broker-url: tcp://localhost:61616
+  #此处开启发布订阅者模式，开启后，队列模式无法获取消息
+  jms:
+    pub-sub-domain: false
