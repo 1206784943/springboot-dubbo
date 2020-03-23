@@ -9,12 +9,11 @@ import org.springframework.stereotype.Component;
 import javax.jms.JMSException;
 import javax.jms.TextMessage;
 
-
+/**
+ * mq消费者
+ */
 @Component
 public class ConsumerService {
-
-    @Autowired
-    private JmsMessagingTemplate jmsMessagingTemplate;
 
 
     @JmsListener(destination = "ActiveMQQueue")// 使用JmsListener配置消费者监听的队列，destination是队列名称

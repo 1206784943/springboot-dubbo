@@ -8,8 +8,8 @@ import org.springframework.jms.core.JmsMessagingTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/*
- * 队列消息控制器
+/**
+ * mq发布者控制器
  */
 @RestController
 public class ProviderController {
@@ -26,15 +26,15 @@ public class ProviderController {
     /*
      * 消息生产者
      */
-    @RequestMapping("/sendmsg")
-    public void sendmsg(String msg) {
+    @RequestMapping("/sendqueue")
+    public void sendqueue(String msg) {
         // 指定消息发送的目的地及内容
         System.out.println("成功发送订阅消息：" + msg);
         this.jmsMessagingTemplate.convertAndSend(this.queue, msg);
     }
 
-    @RequestMapping("/send")
-    public void send(String msg) {
+    @RequestMapping("/sendtopic")
+    public void sendtopic(String msg) {
         // 指定消息发送的目的地及内容
         System.out.println("成功发送广播消息：" + msg);
         this.jmsMessagingTemplate.convertAndSend(this.topic, msg);

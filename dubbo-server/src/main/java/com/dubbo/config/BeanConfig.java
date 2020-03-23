@@ -8,6 +8,10 @@ import org.apache.activemq.command.ActiveMQTopic;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+
+/**
+ * mq发布者配置
+ */
 @Configuration
 public class BeanConfig {
 
